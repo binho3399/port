@@ -1,0 +1,48 @@
+/* Import Google Font Montserrat */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0');
+@import url('https://fonts.googleapis.com/css2?family=Material+Icons+Outlined:opsz,wght,FILL,GRAD@48,400,1,0'); */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  /* --font-montserrat: 'Montserrat', sans-serif; */
+  --font-montserrat: 'Montserrat', 'Open Sans' Helvetica, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  /* background: var(--background); */
+  background-color: black;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px; /* Adjust grid size */
+  font-family: var(--font-montserrat); /* Áp dụng font cho toàn bộ trang */
+}
+
+body::after {
+  content: '';
+  position: fixed; /* Sử dụng fixed để giữ vị trí khi scroll */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(0, 0, 0); */
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.00) 100%);
+  border-radius: 50%; /* Hình tròn, bỏ đi nếu muốn hình vuông */
+  /* box-shadow: 0 0 150px rgba(0, 0, 0, 0.); */
+  z-index: -10; /* Đẩy hình tròn xuống dưới các thành phần khác */
+}
