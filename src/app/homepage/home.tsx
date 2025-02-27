@@ -7,14 +7,14 @@ import ArrowAnimation from "@/components/Arrow";
 
 const HomePage = () => {
     return (
-        <Layout>
+        <>
             <Header />
             <div className="container flex flex-col mx-auto items-center justify-center pt-24 pb-8 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
                 <h1 className="">MULTIDISCIPLINARY</h1>
                 <div className="container flex items-center justify-center gap-6">
                     <h1 className="">PRODUCT</h1>
                     {/* <img src="../" alt="Product Designer" className="h-[.8em] w-auto" /> */}
-                    <img src="../../assets/images/ava.png" alt="" />
+                    <img src="/src/assets/images/ava.png" alt="" />
 
                     {/* Giam chat luong hinh anh */}
                     {/* <Image src="/assets/images/ava.png" alt="Product Designer" height={32} width={32} className="h-[.8em] w-auto" /> */}
@@ -35,7 +35,7 @@ const HomePage = () => {
             <div className="flex justify-center items-center w-full h-[200px]"></div>
 
             <Footer />
-        </Layout>
+        </>
     );
 };
 
