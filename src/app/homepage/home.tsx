@@ -31,8 +31,15 @@ const ArrowAni = <ArrowAnimation
 
 // SubContent component is a section that contains a brief introduction about the designer
 const SubContent = <section className="container flex-col mx-auto items-center justify-center text-center text-5xl whitespace-pre-wrap text-white">
-<h5 className="font-[Open Sans]">{`Meet Binh – a creative designer with a focus on\n UX/UI Design, Branding, and Development.`}</h5>
+    <h5 className="font-[Open Sans]">{`Meet Binh – a creative designer with a focus on\n UX/UI Design, Branding, and Development.`}</h5>
 </section>
+
+// ContentDivder is a section that contains a divider
+const ContentDivder = <div className="flex justify-center items-center w-full h-[200px] !bg-blue-500 text-white"
+    // style={{ backgroundColor: 'blue' }}
+    >
+    test content
+</div>
 
 const HomePage = () => {
     return (
@@ -41,10 +48,8 @@ const HomePage = () => {
             {Hero}
             {ArrowAni}
             {SubContent}
-            
-
-            <div className="flex justify-center items-center w-full h-[200px]"></div>
-
+            {ContentDivder}
+            {/* <div className="flex justify-center items-center w-full h-[200px]"></div> */}
             <Footer />
         </>
     );
