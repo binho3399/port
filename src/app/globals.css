@@ -25,8 +25,8 @@ body {
   /* background: var(--background); */
   background-color: black;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
-  background-size: 40px 40px; /* Adjust grid size */
+    linear-gradient(to right, rgba(255, 255, 255, .1) 1px, transparent 1px);
+  background-size: 44px 44px; /* Adjust grid size */
   font-family: var(--font-montserrat); /* Áp dụng font cho toàn bộ trang */
 }
 
@@ -39,7 +39,7 @@ body::after {
   width: 100%;
   height: 100%;
   /* background-color: rgb(0, 0, 0); */
-  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.75) 50%, rgba(0, 0, 0, 0.00) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, .75) 50%, rgba(0, 0, 0, 0.00) 100%);
   border-radius: 50%; /* Hình tròn, bỏ đi nếu muốn hình vuông */
   /* box-shadow: 0 0 150px rgba(0, 0, 0, 0.); */
   z-index: -10; /* Đẩy hình tròn xuống dưới các thành phần khác */
