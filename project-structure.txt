@@ -1,0 +1,28 @@
+├── public/
+│   ├── images/
+│   ├── fonts/
+│   └── static/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/            # Auth group routes
+│   │   ├── (dashboard)/       # Dashboard group routes
+│   │   ├── api/              # API routes
+│   │   ├── layout.tsx        # Root layout
+│   │   └── page.tsx          # Home page
+│   ├── components/
+│   │   ├── ui/              # Reusable UI components
+│   │   ├── forms/           # Form-related components
+│   │   └── shared/          # Shared components
+│   ├── lib/
+│   │   ├── utils/           # Utility functions
+│   │   └── constants/       # Constants and config
+│   ├── hooks/               # Custom React hooks
+│   ├── types/               # TypeScript types/interfaces
+│   ├── styles/              # Global styles
+│   ├── services/           # API services/external calls
+│   ├── store/              # State management (Redux/Zustand)
+│   └── context/            # React Context providers
+├── .env.local              # Local environment variables
+├── .env.production         # Production environment variables
+├── tailwind.config.js      # Tailwind configuration
+└── next.config.js          # Next.js configuration

@@ -13,12 +13,14 @@ const HomePage = () => {
                 <h1 className="">MULTIDISCIPLINARY</h1>
                 <div className="container flex items-center justify-center gap-6">
                     <h1 className="">PRODUCT</h1>
-                    {/* <img src="../" alt="Product Designer" className="h-[.8em] w-auto" /> */}
-                    <img src="/src/assets/images/ava.png" alt="" />
-
-                    {/* Giam chat luong hinh anh */}
-                    {/* <Image src="/assets/images/ava.png" alt="Product Designer" height={32} width={32} className="h-[.8em] w-auto" /> */}
-
+                    <Image 
+                        src="/assets/images/ava.png" 
+                        alt="Product Designer"
+                        width={80}
+                        height={80}
+                        className="h-[.8em] w-auto object-contain"
+                        priority
+                    />
                     <h1 className="">DESIGNER</h1>
                 </div>
             </div>

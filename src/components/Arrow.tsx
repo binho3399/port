@@ -1,7 +1,7 @@
 "use client";;
 
 import Lottie from "lottie-react";
-import animationData from "../assets/animations/ArrowAnimations.json"; // Import file JSON
+import animationData from "../../public/assets/animations/ArrowAnimations.json"; // Import file JSON
 
 import { useState, useEffect } from "react";
 

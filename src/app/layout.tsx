@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 const agnesFont = localFont({
-  src: "../assets/fonts/Agnes-Regular.otf",
+  src: "../../public/assets/fonts/Agnes-Regular.otf",
   variable: '--font-agnes',
   style: 'normal',
 });
