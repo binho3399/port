@@ -35,10 +35,8 @@ const SubContent = <section className="container flex-col mx-auto items-center j
 </section>
 
 // ContentDivder is a section that contains a divider
-const ContentDivder = <div className="flex justify-center items-center w-full h-[200px] !bg-blue-500 text-white"
-    // style={{ backgroundColor: 'blue' }}
-    >
-    test content
+const ContentDivder = <div className="flex justify-center items-center w-full h-[200px] text-white xl:text-8xl font-thin" style={{ backgroundColor: 'grey' }}>
+    Selected Projects 2019 - 2024
 </div>
 
 const HomePage = () => {
