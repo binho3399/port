@@ -44,3 +44,16 @@ body::after {
   /* box-shadow: 0 0 150px rgba(0, 0, 0, 0.); */
   z-index: -10; /* Đẩy hình tròn xuống dưới các thành phần khác */
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin 15000ms linear infinite;
+}

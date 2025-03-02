@@ -42,7 +42,7 @@ const SubContent: React.FC = () => (
 const ContentDivider: React.FC = () => (
     <div className=" container mx-auto flex justify-center items-center py-[64px] w-full border-b-[1px] border-white gap-8">
         <h3 className="text-white xl:text-8xl font-thin">Selected Projects</h3>
-        <h3 className="text-white opacity-50 xl:text-8xl">✺</h3>
+        <h3 className="text-yellow-500 opacity-50 xl:text-8xl animate-spin-slow">✺</h3>
         <h3 className="text-white opacity-50 xl:text-8xl font-thin">2019 - 2024</h3>
     </div>
 );
