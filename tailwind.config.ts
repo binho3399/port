@@ -27,6 +27,16 @@ export default {
       fontFamily: {
         agnes: 'var(--font-agnes)',
       },
+      transitionProperty: {
+        'all': 'all',
+      },
+      transitionDuration: {
+        '300': '300ms',
+        '500': '500ms',
+      },
+      transitionTimingFunction: {
+        'out': 'cubic-bezier(0.4, 0, 0.2, 1)',
+      },
     },
   },
   plugins: [],
