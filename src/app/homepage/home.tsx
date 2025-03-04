@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import ArrowAnimation from "@/components/Arrow";
 import Article from "@/components/Article";
-import { Metrics } from "../../components/Metrics";
+import { NumberCounter } from "../../components/Metrics";
 
 const Hero: React.FC = () => (
     <main className="container flex flex-col mx-auto items-center justify-center pt-24 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
@@ -60,11 +60,11 @@ const CrdArticle: React.FC = () => (
     />
 );
 
-const MetricsSection: React.FC = () => (
+const Counter: React.FC = () => (
     <div className="container mx-auto flex flex-row justify-center items-center gap-8 py-24">
-        <Metrics number={6} symbol="+" label="CLIENTS"/>
-        <Metrics number={10} symbol="+" label="PROJECTS" />
-        <Metrics number={5} symbol="+" label="YEARS" />
+        <NumberCounter number={6} symbol="+" label="CLIENTS"/>
+        <NumberCounter number={10} symbol="+" label="PROJECTS" />
+        <NumberCounter number={5} symbol="+" label="YEARS" />
     </div>
 );
 
@@ -81,7 +81,7 @@ const HomePage: React.FC = () => {
             />
             <SubContent />
             <ContentDivider />
-            <MetricsSection />
+            <Counter />
             <Footer />
         </div>
     );
