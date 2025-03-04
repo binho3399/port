@@ -1,33 +1,3 @@
-// "use client";
-
-// import Lottie from "lottie-react";
-// import animationData from "../../public/assets/animations/ArrowAnimations.json"; // Import file JSON
-
-// import { useState, useEffect } from "react";
-
-// const ArrowAnimation = () => {
-//   const [size, setSize] = useState(100);
-
-//   useEffect(() => {
-//     const handleResize = () => {
-//       setSize(window.innerWidth < 1440 ? 80 : 200);
-//     };
-
-//     window.addEventListener("resize", handleResize);
-//     handleResize(); // Gọi 1 lần khi render
-
-//     return () => window.removeEventListener("resize", handleResize);
-//   }, []);
-
-//   return (
-//     <div className="flex justify-center items-center">
-//       <Lottie animationData={animationData} loop={true} style={{ width: size, height: size }} />
-//     </div>
-//   );
-// };
-
-// export default ArrowAnimation;
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -42,6 +12,8 @@ const ArrowAnimation: React.FC<ArrowAnimationProps> = ({ style }) => {
   const [size, setSize] = useState("80px");
 
   useEffect(() => {
+    if (typeof window === "undefined") return; // Kiểm tra SSR tránh lỗi
+
     const updateSize = () => {
       const width = window.innerWidth;
       if (width >= 1536) { // 2xl breakpoint
@@ -57,7 +29,8 @@ const ArrowAnimation: React.FC<ArrowAnimationProps> = ({ style }) => {
       }
     };
 
-    updateSize();
+    updateSize(); // Gọi hàm updateSize() khi component được render
+    
     window.addEventListener("resize", updateSize);
     return () => window.removeEventListener("resize", updateSize);
   }, []);

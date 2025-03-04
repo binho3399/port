@@ -17,8 +17,8 @@ const Hero: React.FC = () => (
             <Image
                 src="/assets/images/ava.png"
                 alt="Product Designer"
-                width={80}
-                height={80}
+                width={1024}
+                height={1024}
                 className="h-[.8em] w-auto object-contain"
                 priority
             />
@@ -40,9 +40,9 @@ const SubContent: React.FC = () => (
 );
 
 const ContentDivider: React.FC = () => (
-    <div className=" container mx-auto flex justify-center items-center py-[64px] w-full border-b-[1px] border-white gap-8">
+    <div className="container mx-auto flex justify-center items-center py-[64px] w-full border-b-[1px] border-red gap-8">
         <h3 className="text-white xl:text-8xl font-thin">Selected Projects</h3>
-        <h3 className="text-yellow-500 opacity-50 xl:text-8xl animate-spin-slow">✺</h3>
+        <h3 className="text-accent-500 xl:text-8xl animate-spin-slow">✺</h3>
         <h3 className="text-white opacity-50 xl:text-8xl font-thin">2019 - 2024</h3>
     </div>
 );

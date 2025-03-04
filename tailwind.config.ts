@@ -11,6 +11,18 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        accent: {
+          50: "#fcfee7",
+          100: "#f7fcc2",
+          200: "#f1fa98",
+          300: "#eaf76b",
+          400: "#e3f344",
+          500: "#e1f40f",
+          600: "#d4e102",
+          700: "#c2ca00",
+          800: "#b2b200",
+          900: "#978a00",
+        },
       },
       fontFamily: {
         agnes: 'var(--font-agnes)',
@@ -19,3 +31,4 @@ export default {
   },
   plugins: [],
 } satisfies Config;
+
