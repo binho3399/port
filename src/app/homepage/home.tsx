@@ -62,10 +62,18 @@ const CrdArticle: React.FC = () => (
 );
 
 const Counter: React.FC = () => (
-    <div className="container mx-auto flex flex-row justify-center items-center gap-8 py-24">
+    <div className="container mx-auto flex flex-row justify-center items-center gap-12 py-12">
         <NumberCounter number={6} symbol="+" label="CLIENTS"/>
         <NumberCounter number={10} symbol="+" label="PROJECTS" />
         <NumberCounter number={5} symbol="+" label="YEARS" />
+    </div>
+);
+
+const ListArticles: React.FC = () => (
+    <div className="container mx-auto flex flex-col gap-8 py-6">
+        <CrdArticle />
+        <CrdArticle />
+        <CrdArticle />
     </div>
 );
 
@@ -82,6 +90,7 @@ const HomePage: React.FC = () => {
             />
             <SubContent />
             <ContentDivider />
+            <ListArticles />
             <Counter />
             <Footer />
         </div>
