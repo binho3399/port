@@ -22,9 +22,9 @@ const Article: React.FC<ArticleProps> = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <Link 
+    <Link
       href={link}
-      className="group relative block w-full overflow-hidden border-t border-white/20"
+      className="group relative block w-full overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
