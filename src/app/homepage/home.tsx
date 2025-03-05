@@ -32,13 +32,13 @@ const Hero: React.FC = () => (
 );
 
 const SubContent: React.FC = () => (
-    <section className="container flex flex-col mx-auto items-center justify-center text-center">
+    <div className="container flex flex-col mx-auto items-center justify-center text-center pb-[64px]">
         <h5 className="text-5xl text-white whitespace-pre-wrap">
             Meet Binh – a creative designer with a focus on
             <br />
             UX/UI Design, Branding, and Development.
         </h5>
-    </section>
+    </div>
 );
 
 const ContentDivider: React.FC = () => (
