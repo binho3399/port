@@ -6,6 +6,7 @@ import Image from "next/image";
 import ArrowAnimation from "@/components/Arrow";
 import Article from "@/components/Article";
 import { NumberCounter } from "../../components/Metrics";
+import Services from "@/components/Services";
 
 const Hero: React.FC = () => (
     <main className="container flex flex-col mx-auto items-center justify-center pt-[64px] 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
@@ -85,6 +86,11 @@ const MyServices: React.FC = () => (
             <h3 className="text-accent-500 xl:text-8xl animate-spin-slow">✺</h3>
         </div>
         <div className="flex flex-col gap-8">
+            <Services
+                title="Design Consutancy"
+                description="Designing user interfaces and user experiences for web and mobile applications."
+                href="/services/ui-ux-design"
+            />
             <h3 className="text-white xl:text-8xl font-thin">UI/UX Design</h3>
             <h3 className="text-white xl:text-8xl font-thin">Branding</h3>
             <h3 className="text-white xl:text-8xl font-thin">Development</h3>

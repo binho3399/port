@@ -26,7 +26,7 @@ body {
   background-color: black;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(to right, rgba(255, 255, 255, .1) 1px, transparent 1px);
-  background-size: 44px 44px; /* Adjust grid size */
+  background-size: 79px 79px; /* Adjust grid size */
   font-family: var(--font-montserrat); /* Áp dụng font cho toàn bộ trang */
 }
 
@@ -56,4 +56,52 @@ body::after {
 
 .animate-spin-slow {
   animation: spin 15000ms linear infinite;
+}
+@keyframes arrowFadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes arrowMoveIn {
+  from {
+    opacity: 0;
+    transform: translate(-8px, 8px); /* Góc dưới trái */
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0); /* Trở về vị trí chuẩn */
+  }
+}
+
+.arrow-default {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: arrowFadeOut 0.2s ease-out;
+}
+
+.arrow-hover {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translate(-8px, 8px); /* Bắt đầu ở góc dưới trái */
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.group:hover .arrow-hover {
+  opacity: 1;
+  transform: translate(0, 0); /* Di chuyển lên trên phải */
+}
+
+.group:hover .arrow-default {
+  opacity: 0;
 }
