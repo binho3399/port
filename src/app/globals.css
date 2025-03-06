@@ -26,13 +26,16 @@ body {
   background-color: black;
   background-image: linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
     linear-gradient(to right, rgba(255, 255, 255, .1) 1px, transparent 1px);
-  background-size: 79px 79px; /* Adjust grid size */
-  font-family: var(--font-montserrat); /* Áp dụng font cho toàn bộ trang */
+  background-size: 79px 79px;
+  /* Adjust grid size */
+  font-family: var(--font-montserrat);
+  /* Áp dụng font cho toàn bộ trang */
 }
 
 body::after {
   content: '';
-  position: fixed; /* Sử dụng fixed để giữ vị trí khi scroll */
+  position: fixed;
+  /* Sử dụng fixed để giữ vị trí khi scroll */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -40,15 +43,18 @@ body::after {
   height: 100%;
   /* background-color: rgb(0, 0, 0); */
   background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, .75) 50%, rgba(0, 0, 0, 0.00) 100%);
-  border-radius: 50%; /* Hình tròn, bỏ đi nếu muốn hình vuông */
+  border-radius: 50%;
+  /* Hình tròn, bỏ đi nếu muốn hình vuông */
   /* box-shadow: 0 0 150px rgba(0, 0, 0, 0.); */
-  z-index: -10; /* Đẩy hình tròn xuống dưới các thành phần khác */
+  z-index: -10;
+  /* Đẩy hình tròn xuống dưới các thành phần khác */
 }
 
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -57,23 +63,72 @@ body::after {
 .animate-spin-slow {
   animation: spin 15000ms linear infinite;
 }
+
 @keyframes arrowFadeOut {
   from {
     opacity: 1;
   }
+
   to {
     opacity: 0;
   }
 }
 
-@keyframes arrowMoveIn {
-  from {
+@keyframes arrowMoveInDefault {
+  0% {
     opacity: 0;
-    transform: translate(-8px, 8px); /* Góc dưới trái */
+    transform: translate(80px, -80px);
+    /* Góc tren ben phai */
   }
-  to {
+
+  100% {
     opacity: 1;
-    transform: translate(0, 0); /* Trở về vị trí chuẩn */
+    transform: translate(0, 0);
+    /* Trở về vị trí chuẩn */
+  }
+}
+
+@keyframes arrowMoveInHover {
+  0% {
+    opacity: 0;
+    transform: translate(-80px, 80px);
+    /* Góc dưới trái */
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+    /* Trở về vị trí chuẩn */
+  }
+}
+
+
+
+@keyframes arrowMoveOutDefault {
+  0% { 
+    opacity: 1;
+    transform: translate(0, 0);
+    /* Ve vi tri chuan */
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(80px, -80px);
+    /* Goc tren ben phai */
+  }
+}
+
+@keyframes arrowMoveOutHover {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+    /* Vị trí chuẩn */
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-80px, 80px);
+    /* Góc dưới trái */
   }
 }
 
@@ -83,7 +138,7 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: arrowFadeOut 0.2s ease-out;
+  /* animation: arrowFadeOut 0.5s ease-out; */
 }
 
 .arrow-hover {
@@ -92,16 +147,21 @@ body::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0;
-  transform: translate(-8px, 8px); /* Bắt đầu ở góc dưới trái */
-  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+  /* opacity: 0; */
 }
 
 .group:hover .arrow-hover {
-  opacity: 1;
-  transform: translate(0, 0); /* Di chuyển lên trên phải */
+  animation: arrowMoveInHover 0.5s ease-out forwards;
+}
+
+.group:not(:hover) .arrow-hover {
+  animation: arrowMoveOutHover 0.5s ease-in forwards;
 }
 
 .group:hover .arrow-default {
-  opacity: 0;
+  animation: arrowMoveOutDefault 0.5s ease-out forwards;
+}
+
+.group:not(:hover) .arrow-default {
+  animation: arrowMoveInDefault 0.5s ease-in forwards;
 }
