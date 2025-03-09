@@ -88,22 +88,27 @@ const MyServices: React.FC = () => (
         <div className="flex flex-col gap-8">
             <Services
                 title="Design Consutancy"
+                description="Product Manager, Design Project Manager and Design Strategy, "
+                href="/services/ui-ux-design"
+            />
+            <Services
+                title="UX/UI Design"
+                description="Research, Scenarios,  Wireframe, Prototyping, Usability Testing, Information Architect, Interface Design, Interaction Design, Visual Design, "
+                href="/services/ui-ux-design"
+            />
+            <Services
+                title="Design System"
+                description="Component Library Creation, Design Guidlines & Documentations, Accessibility Standards, Design Systems Governance, User Testing and Feedback Integration, Design Tool Integration, Design System Advocacy and Education, "
+                href="/services/ui-ux-design"
+            />
+            <Services
+                title="Front-end Development"
                 description="Designing user interfaces and user experiences for web and mobile applications."
                 href="/services/ui-ux-design"
             />
             <Services
-                title="UI/UX Design"
-                description="Designing user interfaces and user experiences for web and mobile applications."
-                href="/services/ui-ux-design"
-            />
-            <Services
-                title="Branding"
-                description="Designing user interfaces and user experiences for web and mobile applications."
-                href="/services/ui-ux-design"
-            />
-            <Services
-                title="Development"
-                description="Designing user interfaces and user experiences for web and mobile applications."
+                title="No-code Development"
+                description="Responsive website development, UI Design, Prototype developement, UX Optimization, Mobile App development, Custom Solution Development, Process automation, 3rd party integration, "
                 href="/services/ui-ux-design"
             />
         </div>
