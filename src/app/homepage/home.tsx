@@ -3,10 +3,11 @@ import Layout from "@/app/layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import ArrowAnimation from "@/components/Arrow";
+import ArrowAnimation from "@/app/homepage/Arrow";
 import Article from "@/components/Article";
-import { NumberCounter } from "../../components/Metrics";
-import Services from "@/components/Services";
+import { NumberCounter } from "./Metrics";
+import MyServices from "@/app/homepage/Services";
+import { ContentDivider } from "./ContentDivider";
 
 const Hero: React.FC = () => (
     <main className="container flex flex-col mx-auto items-center justify-center pt-[64px] 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
@@ -42,15 +43,6 @@ const SubContent: React.FC = () => (
     </div>
 );
 
-const ContentDivider: React.FC = () => (
-    <div className="container mx-auto flex justify-center items-center py-[64px] w-full border-b-[1px] border-white gap-8">
-        <h3 className="text-white xl:text-8xl font-thin">Selected Projects</h3>
-        {/* Asterisk google icon */}
-        <h3 className="text-accent-500 xl:text-8xl animate-spin-slow">✺</h3>
-        <h3 className="text-white opacity-50 xl:text-8xl font-thin">2019 - 2024</h3>
-    </div>
-);
-
 const CrdArticle: React.FC = () => (
     // Example usage in your page
     <Article
@@ -78,42 +70,7 @@ const Counter: React.FC = () => (
     </div>
 );
 
-const MyServices: React.FC = () => (
-    <div className="container mx-auto flex flex-col gap-8 py-[64px]">
-        <div className="flex flex-row gap-8">
-            <h3 className="text-white xl:text-8xl font-bold">What can i do</h3>
-            <h3 className="text-white text-opacity-25 xl:text-8xl font-bold">?</h3>
-            <h3 className="text-accent-500 xl:text-8xl animate-spin-slow">✺</h3>
-        </div>
-        <div className="flex flex-col gap-8">
-            <Services
-                title="Design Consutancy"
-                description="Product Manager, Design Project Manager and Design Strategy, "
-                href="/services/ui-ux-design"
-            />
-            <Services
-                title="UX/UI Design"
-                description="Research, Scenarios,  Wireframe, Prototyping, Usability Testing, Information Architect, Interface Design, Interaction Design, Visual Design, "
-                href="/services/ui-ux-design"
-            />
-            <Services
-                title="Design System"
-                description="Component Library Creation, Design Guidlines & Documentations, Accessibility Standards, Design Systems Governance, User Testing and Feedback Integration, Design Tool Integration, Design System Advocacy and Education, "
-                href="/services/ui-ux-design"
-            />
-            <Services
-                title="Front-end Development"
-                description="Designing user interfaces and user experiences for web and mobile applications."
-                href="/services/ui-ux-design"
-            />
-            <Services
-                title="No-code Development"
-                description="Responsive website development, UI Design, Prototype developement, UX Optimization, Mobile App development, Custom Solution Development, Process automation, 3rd party integration, "
-                href="/services/ui-ux-design"
-            />
-        </div>
-    </div>
-);
+
 
 const HomePage: React.FC = () => {
     return (

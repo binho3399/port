@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Lottie from "lottie-react";
-import animationData from "../../public/assets/animations/ArrowAnimations.json";
+import animationData from "../../../public/assets/animations/ArrowAnimations.json";
 
 interface ArrowAnimationProps {
   style?: React.CSSProperties;
