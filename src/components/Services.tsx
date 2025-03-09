@@ -17,12 +17,12 @@ export default function Services({ title, description, href }: ServiceProps) {
       <span className="relative inline-block w-6 h-6">
         {/* Mũi tên ban đầu (trắng) */}
         <span className="arrow-default text-white">
-          <span className="material-icons 2xl:text-2xl">arrow_outward</span>
+          <span className="material-icons 2xl:text-[32px]">arrow_outward</span>
         </span>
 
         {/* Mũi tên khi hover (accent-500) */}
         <span className="arrow-hover text-accent-500">
-          <span className="material-icons 2xl:text-2xl">arrow_outward</span>
+          <span className="material-icons 2xl:text-[32px]">arrow_outward</span>
         </span>
       </span>
 

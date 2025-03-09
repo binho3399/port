@@ -77,13 +77,13 @@ body::after {
 @keyframes arrowMoveInDefault {
   0% {
     opacity: 0;
-    transform: translate(80px, -80px);
+    transform: translate(8px, -8px) scale(0);
     /* Góc tren ben phai */
   }
 
   100% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
     /* Trở về vị trí chuẩn */
   }
 }
@@ -91,13 +91,13 @@ body::after {
 @keyframes arrowMoveInHover {
   0% {
     opacity: 0;
-    transform: translate(-80px, 80px);
+    transform: translate(-8px, 8px) scale(0);
     /* Góc dưới trái */
   }
 
   100% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
     /* Trở về vị trí chuẩn */
   }
 }
@@ -105,15 +105,15 @@ body::after {
 
 
 @keyframes arrowMoveOutDefault {
-  0% { 
+  0% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
     /* Ve vi tri chuan */
   }
 
   100% {
     opacity: 0;
-    transform: translate(80px, -80px);
+    transform: translate(8px, -8px) scale(0);
     /* Goc tren ben phai */
   }
 }
@@ -121,13 +121,13 @@ body::after {
 @keyframes arrowMoveOutHover {
   0% {
     opacity: 1;
-    transform: translate(0, 0);
+    transform: translate(0, 0) scale(1);
     /* Vị trí chuẩn */
   }
 
   100% {
     opacity: 0;
-    transform: translate(-80px, 80px);
+    transform: translate(-8px, 8px) scale(0);
     /* Góc dưới trái */
   }
 }
@@ -151,17 +151,17 @@ body::after {
 }
 
 .group:hover .arrow-hover {
-  animation: arrowMoveInHover 0.5s ease-out forwards;
+  animation: arrowMoveInHover 0.3s ease-out forwards;
 }
 
 .group:not(:hover) .arrow-hover {
-  animation: arrowMoveOutHover 0.5s ease-in forwards;
+  animation: arrowMoveOutHover 0.3s ease-in forwards;
 }
 
 .group:hover .arrow-default {
-  animation: arrowMoveOutDefault 0.5s ease-out forwards;
+  animation: arrowMoveOutDefault 0.3s ease-out forwards;
 }
 
 .group:not(:hover) .arrow-default {
-  animation: arrowMoveInDefault 0.5s ease-in forwards;
+  animation: arrowMoveInDefault 0.3s ease-in forwards;
 }

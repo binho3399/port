@@ -91,9 +91,21 @@ const MyServices: React.FC = () => (
                 description="Designing user interfaces and user experiences for web and mobile applications."
                 href="/services/ui-ux-design"
             />
-            <h3 className="text-white xl:text-8xl font-thin">UI/UX Design</h3>
-            <h3 className="text-white xl:text-8xl font-thin">Branding</h3>
-            <h3 className="text-white xl:text-8xl font-thin">Development</h3>
+            <Services
+                title="UI/UX Design"
+                description="Designing user interfaces and user experiences for web and mobile applications."
+                href="/services/ui-ux-design"
+            />
+            <Services
+                title="Branding"
+                description="Designing user interfaces and user experiences for web and mobile applications."
+                href="/services/ui-ux-design"
+            />
+            <Services
+                title="Development"
+                description="Designing user interfaces and user experiences for web and mobile applications."
+                href="/services/ui-ux-design"
+            />
         </div>
     </div>
 );
