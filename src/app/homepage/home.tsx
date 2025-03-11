@@ -2,36 +2,13 @@ import React from "react";
 import Layout from "@/app/layout";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Image from "next/image";
-import ArrowAnimation from "@/app/homepage/Arrow";
+import ArrowAnimation from "@/app/homepage/_component/Arrow";
 import Article from "@/components/Article";
-import { NumberCounter } from "./Metrics";
-import MyServices from "@/app/homepage/Services";
-import { ContentDivider } from "./ContentDivider";
-
-const Hero: React.FC = () => (
-    <main className="container flex flex-col mx-auto items-center justify-center pt-[64px] 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
-        <h1 className="">
-            MULTIDISCIPLINARY
-        </h1>
-        <div className="flex items-center justify-center gap-6">
-            <h1 className="">
-                PRODUCT
-            </h1>
-            <Image
-                src="/assets/images/ava.png"
-                alt="Product Designer"
-                width={1024}
-                height={1024}
-                className="h-[.8em] w-auto object-contain"
-                priority
-            />
-            <h1 className="">
-                DESIGNER
-            </h1>
-        </div>
-    </main>
-);
+import { NumberCounter } from "./_component/Metrics";
+import MyServices from "@/app/homepage/_component/Services";
+import { ContentDivider } from "./_component/ContentDivider";
+import { Hero } from "./_component/Hero";
+import ServiceItem from "./_component/ServiceItem";
 
 const SubContent: React.FC = () => (
     <div className="container flex flex-col mx-auto items-center justify-center text-center pb-[64px]">
@@ -88,6 +65,7 @@ const HomePage: React.FC = () => {
             <ListArticles />
             <Counter />
             <MyServices />
+            {/* <ServiceItem /> */}
             <Footer />
         </div>
     );

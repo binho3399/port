@@ -18,12 +18,12 @@ export const ContentDivider: React.FC = () => {
     const ref = useRef<HTMLDivElement>(null);
     const [offset, setOffset] = useState(0);
 
-    const content = useMemo(() => generateScrollingContent("SELECTED PROJECTS", 2), []);
+    const content = useMemo(() => generateScrollingContent("SELECTED PROJECTS", 50), []);
 
     useEffect(() => {
         let animationFrameId: number;
         let start = Date.now();
-        const speed = 0.15; // Tốc độ cuộn
+        const speed = 0.05; // Tốc độ cuộn
 
         const scroll = () => {
             let elapsed = Date.now() - start;

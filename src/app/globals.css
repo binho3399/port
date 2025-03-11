@@ -103,7 +103,7 @@ body::after {
 }
 
 @keyframes arrowMoveOutDefault {
-  0% { 
+  0% {
     opacity: 1;
     transform: translate(0, 0) scale(1);
     /* Ve vi tri chuan */
@@ -119,12 +119,12 @@ body::after {
 @keyframes arrowMoveOutHover {
   0% {
     opacity: 1;
-    transform: translate(0, 0) ;
+    transform: translate(0, 0);
     /* Vị trí chuẩn */
   }
 
   100% {
-    opacity: 0; 
+    opacity: 0;
     transform: translate(-16px, 16px) scale(0);
     /* Góc dưới trái */
   }
@@ -161,14 +161,14 @@ body::after {
 }
 
 .group:not(:hover) .arrow-default {
-  animation: arrowMoveInDefault 0.3s ease-in forwards; 
+  animation: arrowMoveInDefault 0.3s ease-in forwards;
 }
 
 .fading-text {
   position: relative;
   display: inline-block;
   overflow: hidden;
-  white-space: nowrap; 
+  white-space: nowrap;
   flex: 1;
 }
 
@@ -177,7 +177,8 @@ body::after {
   content: "";
   position: absolute;
   top: 0;
-  width: 100px; /* Điều chỉnh độ rộng vùng mờ */
+  width: 100px;
+  /* Điều chỉnh độ rộng vùng mờ */
   height: 100%;
   pointer-events: none;
   z-index: 1;
@@ -193,45 +194,42 @@ body::after {
   background: linear-gradient(to left, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 }
 
+
+.scrolling-text {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+  overflow: hidden;
+  animation: scrollText 5s linear infinite;
+  /* Mặc định */
+}
+
 @keyframes scrollText {
-  from {
-    transform: translateX(100%);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes resetScrollText {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
-  }
-}
-
-.group:hover .scrolling-text {
-  transform: translateX(100%);
-  animation: scrollText 3s linear infinite;
-}
-
-.group:not(:hover) .scrolling-text {
-  animation: resetScrollText 0s linear forwards;
-}
-
-/* @keyframes scroll-left {
   0% {
-      transform: translateX(100%);
+    transform: translateX(100%);
   }
 
   100% {
-      transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+/* 
+@keyframes resetScrollText {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
   }
 } */
 
-/* .scrolling-divider { */
-  /* Start off the right edge */
+.group:hover .scrolling-text {
   /* transform: translateX(100%); */
-  /* animation: scroll-left; */
-/* } */
+  animation: scrollText 10s linear infinite;
+}
+
+.group:not(:hover) .scrolling-text {
+  transform: translateX(100%);
+  animation: scrolling-text 0s linear infinite;
+}
