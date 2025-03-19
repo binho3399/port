@@ -17,11 +17,11 @@ const ArrowAnimation: React.FC<ArrowAnimationProps> = ({ style }) => {
     const updateSize = () => {
       const width = window.innerWidth;
       if (width >= 1536) { // 2xl breakpoint
-        setSize("160px");
+        setSize("180px");
       } else if (width >= 1280) { // xl breakpoint
-        setSize("140px");
+        setSize("150px");
       } else if (width >= 1024) { // lg breakpoint
-        setSize("100px");
+        setSize("110px");
       } else if (width >= 768) { // md breakpoint
         setSize("80px");
       } else {

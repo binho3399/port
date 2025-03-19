@@ -200,36 +200,43 @@ body::after {
   white-space: nowrap;
   will-change: transform;
   overflow: hidden;
-  animation: scrollText 5s linear infinite;
+  /* animation: scrollText 5s linear infinite; */
+  animation: scrollText var(--scroll-duration, 10s) linear infinite;
   /* Mặc định */
 }
 
 @keyframes scrollText {
   0% {
-    transform: translateX(100%);
+    /* opacity: 0; */
+    transform: translateX(120%);
   }
 
   100% {
+    /* opacity: 1; */
     transform: translateX(-100%);
   }
 }
-/* 
+
 @keyframes resetScrollText {
   0% {
+    opacity: 0;
     transform: translateX(-100%);
   }
 
   100% {
+    opacity: 0;
     transform: translateX(100%);
   }
-} */
+}
 
 .group:hover .scrolling-text {
   /* transform: translateX(100%); */
-  animation: scrollText 10s linear infinite;
+  /* animation: scrollText 10s linear infinite; */
+  animation-duration: var(--scroll-hover-duration, 5s);
 }
 
 .group:not(:hover) .scrolling-text {
-  transform: translateX(100%);
-  animation: scrolling-text 0s linear infinite;
+  /* transform: translateX(-100%); */
+  /* opacity: 0; */
+  animation: resetScrollText 0s linear forwards;
 }

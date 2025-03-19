@@ -17,10 +17,10 @@ function Services({ title, description, href }: ServiceProps) {
     if (textRef.current) {
       const textWidth = textRef.current.scrollWidth;
       const containerWidth = textRef.current.parentElement?.clientWidth || 200;
-      const newDuration = Math.max(5, (textWidth / containerWidth) * 3); // Tính thời gian cuộn động
-      setDuration(newDuration);
+      const calculatedDuration = Math.max(5, (textWidth / containerWidth) * 2.5); // Tối ưu hệ số
+      if (calculatedDuration !== duration) setDuration(calculatedDuration);
     }
-  }, [description]);
+  }, [description, duration]); // Thêm `duration` để tránh cập nhật liên tục
 
   return (
     <div
@@ -45,9 +45,10 @@ function Services({ title, description, href }: ServiceProps) {
 
       {/* Chữ nhỏ khi hover */}
       <div className="flex fading-text">
-        <span className="scrolling-text flex flex-1 xl:text-2xl text-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+        <span
+          className="scrolling-text flex flex-1 xl:text-2xl text-accent-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           ref={textRef}
-          style={{ animationDuration: `${duration}s` }} // Cập nhật tốc độ cuộn
+          style={{ "--scroll-duration": `${duration}s` } as React.CSSProperties} // Dùng biến CSS
         >
           {description}
         </span>
@@ -60,7 +61,6 @@ const MyServices: React.FC = () => (
   <div className="container mx-auto flex flex-col gap-8 py-[64px]">
     <div className="flex flex-row gap-8">
       <h3 className="text-white xl:text-8xl font-bold">What can i do</h3>
-      <h3 className="text-white text-opacity-25 xl:text-8xl font-bold">?</h3>
       <h3 className="text-accent-500 xl:text-8xl animate-spin-slow">✺</h3>
     </div>
     <div className="flex flex-col gap-8">

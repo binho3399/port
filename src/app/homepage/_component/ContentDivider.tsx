@@ -37,7 +37,7 @@ export const ContentDivider: React.FC = () => {
     }, []);
 
     return (
-        <div className="container mx-auto flex w-full py-[64px] border-b-[1px] border-white overflow-hidden fading-text">
+        <div className="container mx-auto flex w-full 2xl:py-20 xl:py-16 overflow-hidden fading-text">
             <div
                 ref={ref}
                 className="whitespace-nowrap flex flex-1 items-center gap-8"

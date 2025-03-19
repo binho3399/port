@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const aboutSect =
     <div className="container mx-auto flex justify-between gap-12">
         <div className="container flex flex-col gap-2">
