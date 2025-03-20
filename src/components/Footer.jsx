@@ -34,7 +34,7 @@ const copyRight = <div className="container flex mx-auto justify-between 2xl:tex
 
 const Footer = () => {
     return (
-        <footer className="text-white px-6 text-lg flex flex-col gap-16 2xl:py-6 py-4">
+        <footer className="text-white px-6 text-lg flex flex-col gap-16 2xl:pt-20 pt-4 2xl:pb-6 pb-4">
             {aboutSect}
             {fullName}
             {copyRight}

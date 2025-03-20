@@ -8,7 +8,7 @@ import MyServices from "@/app/homepage/_component/Services";
 import { ContentDivider } from "./_component/ContentDivider";
 import { Hero } from "./_component/Hero";
 import ServiceItem from "./_component/ServiceItem";
-import { CardArticle } from "./_component/CardArticle";
+import { ListArticles } from "./_component/Articles/ListArticles";
 
 const SubContent: React.FC = () => (
     <div className="container flex flex-col mx-auto items-center justify-center text-center 2xl:pt-8 2xl:pb-20 pb-16">
@@ -17,28 +17,6 @@ const SubContent: React.FC = () => (
             <br />
             UX/UI Design, Branding, and Development.
         </h5>
-    </div>
-);
-
-// const CrdArticle: React.FC = () => (
-//     // Example usage in your page
-//     <Article
-//         title="Project Name"
-//         description="Project description goes here"
-//         imageUrl="/path/to/image.jpg"
-//         link="/projects/project-name"
-//         year="2024"
-//     />
-// );
-
-const ListArticles: React.FC = () => (
-    <div className="container mx-auto flex flex-col gap-8">
-        <CardArticle
-            title="Richters & Hüls"
-            description="Richters & Hüls is an engineering company for environment and pollution control. Together we refreshed their corporate design and gave their website a new, modern look."
-            imageUrl="/assets/images/ava.png"
-            href="/images/ava.png"
-        />
     </div>
 );
 

@@ -11,7 +11,9 @@ interface CardArticleProps {
 
 export const CardArticle: React.FC<CardArticleProps> = ({ title, description, imageUrl, href }) => {
   return (
-    <div className="p-8 rounded-xl flex gap-6 shadow-lg bg-white bg-opacity-10 rounded-2xl overflow-hidden border-4 border-white border-opacity-10">
+    <div className="p-8 rounded-xl flex gap-6 shadow-lg bg-white bg-opacity-5 rounded-2xl overflow-hidden border-4 border-white border-opacity-5 backdrop-blur-sm">
+      {/* <div className="absolute inset-0 noise-bg z-[-1]"></div> */}
+      
       {/* Nội dung bên trái */}
       <div className="flex flex-col flex-1 justify-between gap-8">
         <div className="flex gap-2">
@@ -26,7 +28,7 @@ export const CardArticle: React.FC<CardArticleProps> = ({ title, description, im
       </div>
 
       {/* Nội dung bên phải */}
-      <div className="flex flex-1 flex-col text-left gap-6">
+      <div className="flex flex-1 flex-col text-left gap-10">
         <div>
           <img src={imageUrl} alt={title} className="w-full object-cover h-auto aspect-[4/3] rounded-xl border border-white"/>
         </div>
