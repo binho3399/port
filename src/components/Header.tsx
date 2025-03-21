@@ -15,20 +15,19 @@ const Header = () => {
         <div className="flex gap-6 items-center">
           {/* Navigation Links */}
           <nav className="hidden md:flex space-x-6">
-            <Link href="/about" className="text-gray-300 hover:text-white transition">
+            <Link href="/aboutme" className="text-gray-300 hover:text-accent-500 transition">
               About Binh
             </Link>
           </nav>
 
           {/* CTA Button */}
           <Link href="/contact">
-            <button className="group border border-white text-white px-5 py-2 rounded-full flex items-center hover:bg-white hover:text-black transition">
-              Let's work together
-              {/* <span className="ml-2">→</span> */}
-              <span className="material-icons ml-2 text-white group-hover:text-black transition">
+            <button className="group relative flex border border-white text-white px-5 py-2 rounded-full items-center overflow-hidden">
+              <span className="absolute left-0 w-0 h-full bg-accent-500 transition-all duration-500 esae-out group-hover:w-full z-[-1]"></span>
+              <span className="relative z-10 group-hover:text-black transition-colors">Let's work together</span>
+              <span className="material-icons z-10 ml-2 relative z-10 text-white group-hover:text-black transition-colors">
                 arrow_right_alt
               </span>
-              {/* <ArrowRightAltIcon className="ml-2 text-white hover:text-black transition" /> */}
             </button>
           </Link>
         </div>

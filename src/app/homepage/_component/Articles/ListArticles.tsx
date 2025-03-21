@@ -51,7 +51,8 @@ const articles = [
         href: "/images/ava.png"
     }
 ];
-export const ListArticles: React.FC = () => (
+
+export const ListArticles = () => (
     <div className="container mx-auto flex flex-col gap-20">
         {articles.map((article, index) => (
             <CardArticle
