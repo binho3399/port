@@ -54,7 +54,7 @@ function Services({ title, description, href }: ServiceProps) {
   );
 }
 
-const MyServices: React.FC = () => (
+const MyServices = () => (
   <div className="container mx-auto flex flex-col gap-8 py-[64px]">
     <div className="flex flex-row gap-8">
       <Services

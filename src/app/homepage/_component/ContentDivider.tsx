@@ -14,7 +14,7 @@ const generateScrollingContent = (text: string, count: number) => {
     ));
 };
 
-export const ContentDivider: React.FC = () => {
+export const ContentDivider = () => {
     const ref = useRef<HTMLDivElement>(null);
     const [offset, setOffset] = useState(0);
 

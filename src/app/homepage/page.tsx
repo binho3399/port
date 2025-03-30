@@ -4,13 +4,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ArrowAnimation from "@/app/homepage/_component/Arrow";
 import { NumberCounter } from "./_component/Metrics";
-import MyServices from "@/app/homepage/_component/Services";
+import MyServices from "@/app/homepage/_component/Services/Services";
 import { ContentDivider } from "./_component/ContentDivider";
 import { Hero } from "./_component/Hero";
-import ServiceItem from "./_component/ServiceItem";
 import { ListArticles } from "./_component/Articles/ListArticles";
 
-const SubContent: React.FC = () => (
+const SubContent = () => (
     <div className="container flex flex-col mx-auto items-center justify-center text-center 2xl:pt-8 2xl:pb-20 pb-16">
         <h5 className="text-5xl text-white whitespace-pre-wrap">
             Meet Binh – a creative designer with a focus on
@@ -20,7 +19,7 @@ const SubContent: React.FC = () => (
     </div>
 );
 
-const Counter: React.FC = () => (
+const Counter = () => (
     <div className="container mx-auto flex flex-row justify-center items-center gap-12 2xl:py-20 py-16">
         <NumberCounter number={6} symbol="+" label="CLIENTS" />
         <NumberCounter number={10} symbol="+" label="PROJECTS" />
@@ -28,7 +27,7 @@ const Counter: React.FC = () => (
     </div>
 );
 
-const HomePage: React.FC = () => {
+const HomePage = () => {
     return (
         <div className="min-h-screen flex flex-col">
             <Header />

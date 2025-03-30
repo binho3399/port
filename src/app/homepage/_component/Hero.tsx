@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export const Hero: React.FC = () => (
+export const Hero = () => (
     <main className="container flex flex-col mx-auto items-center justify-center 2xl:pt-20 2xl:pb-8 xl:pt-16 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
         <h1 className="">
             MULTIDISCIPLINARY
