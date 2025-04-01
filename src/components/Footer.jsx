@@ -1,3 +1,6 @@
+"use client";
+import LinkBTN from './Button';
+
 const aboutSect =
     <div className="container mx-auto flex justify-between gap-12">
         <div className="container flex flex-col gap-2">
@@ -6,22 +9,33 @@ const aboutSect =
         </div>
         <div className="container flex flex-col gap-2">
             <span className="text-gray-500" href="/about">Contact me for work</span>
-            <div className="container flex gap-2 justify-between text-start">
-                <span className="container flex">Email </span>
-                <span className="container flex">Zalo </span>
+            <div className="container flex gap-2">
+                {/* <span className="container flex">Email </span> */}
+                <div className="container flex gap-2">
+                    <LinkBTN text="Email" onClick={() => alert('Hello!')} />
+                </div>
+                <div className="container flex gap-2">
+                    <LinkBTN text="Zalo" onClick={() => alert('Hello!')} />
+                </div>
             </div>
         </div>
         <div className="container flex flex-col gap-2">
             <span className="text-gray-500" href="/about">Social</span>
             <div className="container flex gap-2 justify-between text-start">
-                <span className="container flex">FB </span>
-                <span className="container flex">IG </span>
-                <span className="container flex">IN </span>
+                <div className="container flex gap-2">
+                    <LinkBTN text="FB" onClick={() => alert('Hello!')} />
+                </div>
+                <div className="container flex gap-2">
+                    <LinkBTN text="IG" onClick={() => alert('Hello!')} />
+                </div>
+                <div className="container flex gap-2">
+                    <LinkBTN text="IN" onClick={() => alert('Hello!')} />
+                </div>
             </div>
         </div>
     </div>;
 
-const fullName = <div className="container flex flex-col mx-auto justify-center 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white">
+const fullName = <div className="container flex flex-col mx-auto justify-center 2xl:text-9xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl text-5xl font-black text-white gap-6">
     {/* <hr className=" border-gray-600" /> */}
     <h1 className="text-start">HO DAC</h1>
     <h1 className="text-end">QUANG BINH</h1>
@@ -42,4 +56,4 @@ const Footer = () => {
     );
 }
 
-export default Footer;  
+export default Footer;

@@ -34,7 +34,7 @@
     "**/*.tsx",
     // "src/global.d.ts",  // 👈 Thêm dòng này nếu để file ở src/
     ".next/types/**/*.ts"
-  ],
+, "src/components/Button.jsx"  ],
   "exclude": [
     "node_modules"
   ]

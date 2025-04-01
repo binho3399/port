@@ -22,10 +22,10 @@ const Header = () => {
 
           {/* CTA Button */}
           <Link href="/contact">
-            <button className="group relative flex border border-white text-white px-5 py-2 rounded-full items-center overflow-hidden">
+            <button className="group relative flex border border-white text-white px-5 py-2 rounded-full items-center overflow-hidden transition-colors duration-300 hover:border-accent-500">
               <span className="absolute left-0 w-0 h-full bg-accent-500 transition-all duration-300 esae-out group-hover:w-full z-[-1]"></span>
               <span className="relative z-10 group-hover:text-black transition-colors">Let's work together</span>
-              <span className="material-icons z-10 ml-2 relative z-10 text-white group-hover:text-black transition-colors">
+              <span className="material-icons z-10 ml-2 relative z-10 text-white group-hover:text-black  transition-colors">
                 arrow_right_alt
               </span>
             </button>
