@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import React from "react";
-import { educationData, expData } from "../../data/UserData";
+import { aboutMe, educationData, expData } from "../../data/UserData";
 import Footer from "@/components/Footer";
 
 const HeroSection = () => (
@@ -64,17 +64,14 @@ const ProfileInfo = () => (
 const ProfileBio = () => (
   <div className="container mx-auto 2xl:py-20 xl:py-16 ">
     <div className="flex flex-col w-2/3 ml-auto gap-6 text-lg text-left text-white">
-      <p className="">
-        In UX/UI 4 years, I am currently living in Ho Chi Minh City, I've been working at SuZu Group as a project manager since 2023.
-
-        I'm passionate about creating experiences that are enjoyable and relevant to the needs of product users.
-        I combine functionality, aesthetics, and user-centric design to turn ideas into innovative products that achieve business goals.
-        During my work time addition to skills related to UX/UI and product design expertise, I also developed team management skills.
-        With a passion for innovation and creativity, I am constantly exploring new technologies and sustainable design to stay at the forefront of product design and enhance the user experience with products.
+      <p className="whitespace-pre-line">
+        {aboutMe}
       </p>
     </div>
   </div>
 );
+
+
 
 const AboutMe = () => (
   <div className="min-h-screen">
