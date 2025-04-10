@@ -1,5 +1,5 @@
 "use client";
-import LinkBTN from './Button';
+import LinkBTN from './Button/GhostBTN';
 
 const aboutSect =
     <div className="container mx-auto flex justify-between gap-12">

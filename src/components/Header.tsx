@@ -8,7 +8,7 @@ const Header = () => {
         {/* Logo */}
         <div className="text-4xl font-bold">
           <Link href="/">
-            <span className="font-agnes">BinH</span> {/* Update with actual logo */}
+            <span className="">BinH</span> {/* Update with actual logo */}
           </Link>
         </div>
 

@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import React from "react";
 import { aboutMe, educationData, expData } from "../../data/UserData";
 import Footer from "@/components/Footer";
+import { FBBTN } from "@/components/Button/SocialBTN";
 
 const HeroSection = () => (
   <div className="container mx-auto flex items-center text-left pb-16 2xl:pt-20 xl:pt-16 justify-between gap-12">
@@ -75,7 +76,7 @@ const ProfileBio = () => (
 
 const AboutMe = () => (
   <div className="min-h-screen">
-    <Header />
+    <Header />]
     <HeroSection />
     <ProfileInfo />
     <ProfileBio />
